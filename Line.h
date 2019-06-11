@@ -1,9 +1,8 @@
 #pragma once
 
 struct Line : Shape {    // Line-Unterklasse wird definiert.
-	Line(Point p1, Point p2, int lw, int lc)
 	Line(Point p1, Point p2, int lw, int lc)  // Die Linie wird mit Anfangs- und Endpunkt definiert.
-		
+	: Shape(lw, lc, 0) {	
 		add(p1);
 		add(p2);
 	}
