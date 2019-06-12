@@ -1,6 +1,6 @@
 #pragma once
 
-struct Circle : Shape { //Definition Kreis-Klasse, für geworfenes Objekt; ist eine Form-Unterklasse
+struct Circle : Shape { //Definition Kreis-Klasse für geworfenes Objekt; ist eine Form-Unterklasse
 	int radius;
 	Circle(Point p, int r, int lw, int lc, int fc)  
 		: radius(r), Shape(lw, lc, fc) {
