@@ -1,7 +1,7 @@
 #pragma once
 
 struct Widget { // Definition der Widget-Klasse
-	int width, height;  //Parameter zur Bestimmung der Größe und Höhe des Widgets
+	int width, height;  //Parameter zur Bestimmung der Position, Größe und Höhe des Widgets
 	string label;
 	Point xy;
 	Callback do_it;  // führt beim "Drücken" eine Callback-Funktion aus
