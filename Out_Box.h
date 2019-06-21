@@ -2,7 +2,7 @@
 
 struct Out_box : Widget { // Definition der Out_Box als Widget-Unterklasse
 	Fl_Text_Display* pw; //  Speicheradresse pw mit Informationen zu Farbe und Form wird definiert.
-	Fl_Text_Buffer* buff; //  Speicheradresse des Text-Buffers; in Zukunft können Callback-Funktionen bei Veränderung des Buffers initialisiert werden.
+	Fl_Text_Buffer* buff; //  Speicheradresse des Text-Buffers; 
 	Out_box(Point p, int w, int h, string s) // Position und Größe der Box sowie 
 		: Widget(p, w, h, s, 0) {}
 	void set_value(string s) { buff->text(s.c_str()); }
