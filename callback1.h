@@ -3,6 +3,7 @@
 #include <chrono> //chrono-lib zur Messung und Wiedergabe der Wurfzeit und Runtime der callback-Funktion.
 
 void callback1(Fl_Widget*, void*) { //Definition callback1-Funktion
+	ofstream out{ "height_vs_time.txt" }; //.txt Datei um Werte für Plot aufzuzeichnen.
 	double R{ 20 }; //Radius des Kreises wird festgelegt
 	double xmin{ R }, xmax{ w - R }, ymin{ h / 4 + R }, ymax{ h - R }; // Minimal- und Maximalwerte fuer Hoehe und Breite werden definiert
 	double x0{ 0 }, y0{ slider1.get_value() * 0.001 * (h - R - h / 4 - R) + ymin }; //Koordinaten des Kreis-Mittelpunkts werden festgelegt. Man muss beachten, dass der Koordinaten Ursprung in der linken oberen Ecke liegt und man beim addieren nach unten geht.
@@ -21,9 +22,11 @@ void callback1(Fl_Widget*, void*) { //Definition callback1-Funktion
 	double showtime = 0; //Die Bedetung dieser Variable wird unten erklärt.
 	while (true) { // fuehre if-Bedingung aus, die das Verhalten des Balls beim Aufprall auf die Raender des Fensters definiert.
 		outbox3.set_value(to_string(h - 930 - 2.170213 - ((slider1.get_value() * 0.001 * (h - R - h / 4 - R) + ymin) / 117.5))); //Wurfhöhe wird in drittem Output-Fenster angezeigt. Die Zahlenwerte sind so gewählt, dass die Höhe bei minimalem Regeler-Wert gleich 0 ist.
+		ycoord =  (ymax - y[0]) / 117.5; 
 		t2 = steady_clock::now();
 		double duration = duration_cast<microseconds>(t2 - t1).count() / pow(10, 6); //steady_clock zeichnet die Zeit auf. Mit duration_cast kann die Differenz zwischen den Zeiten t1 und t2 auf 6 Nachkommastellen genau angezeigt werden.
 		outbox1.set_value(to_string(duration)); //erstes Output-Fenster zeigt Zeit seit Beginn der callback Funktion an.
+		out << duration << '\t' << ycoord << endl; //Zeit und y-Koordinaten werden in einer .txt Datei aufgezeichnet um geplottet zu werden in callback2.
 		if (x[0] > xmax) {
 			vx[0] *= -1;
 			x[0] = xmax;
