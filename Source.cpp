@@ -15,6 +15,8 @@ Out_box outbox3(Point(w / 2 + 300, 120), 100, 30, "m.");
 
 #include "callback1.h" //callback1-Funktion wird eingebunden und auf bei Drücken von Button1 iniziiert
 Button button1(Point(200, 200), 100, 30, "RUN", callback1);
+#include "callback2.h" ////callback2-Funktion wird eingebunden und auf bei Drücken von Button2 iniziiert
+Button button2(Point(w / 2 + 200, 200), 100, 30, "PLOT", callback2); 
 
 int main() {
 	window.attach(line1); //Alle Objekte werden in das Fenster eingefügt
