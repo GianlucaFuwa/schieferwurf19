@@ -16,3 +16,15 @@ using namespace std;
 using Callback = void(*)(Fl_Widget*, void*); //callback-Funktion wird definiert.
 
 int w{Fl::w()/2 + 500}, h{Fl::h() - 100}; //Fenstergröße wird festgelegt.
+
+#include "Point.h"
+#include "Shape.h"
+#include "Line.h"
+#include "Circle.h"
+#include "Text.h"
+#include "Widget.h"
+#include "Slider.h"
+#include "In_box.h"
+#include "Button.h"
+#include "Out_Box.h"
+#include "Windows.h"
