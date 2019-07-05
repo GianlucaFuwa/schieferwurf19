@@ -19,7 +19,7 @@ void callback1(Fl_Widget*, void*) { //Definition callback1-Funktion
 	vy.push_back(v0 * sin(theta));
 	steady_clock::time_point t1 = steady_clock::now();
 	steady_clock::time_point t2 = steady_clock::now();
-	double showtime = 0; //Die Bedetung dieser Variable wird unten erklärt.
+	double showtime = 0; //Die Bedeutung dieser Variable wird unten erklärt.
 	while (true) { // fuehre if-Bedingung aus, die das Verhalten des Balls beim Aufprall auf die Raender des Fensters definiert.
 		outbox3.set_value(to_string(h - 930 - 2.170213 - ((slider1.get_value() * 0.001 * (h - R - h / 4 - R) + ymin) / 117.5))); //Wurfhöhe wird in drittem Output-Fenster angezeigt. Die Zahlenwerte sind so gewählt, dass die Höhe bei minimalem Regeler-Wert gleich 0 ist.
 		ycoord =  (ymax - y[0]) / 117.5; 
