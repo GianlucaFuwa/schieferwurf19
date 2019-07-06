@@ -1,0 +1,4 @@
+Falls das Kompilieren mit CMakeFile nicht funktioniert, kann man das Programm in der Shell mit 
+folgendem Command kompilieren:
+
+    g++ Source.cpp -o Source -std=c++11 `fltk-config --ldflags` -lboost_iostreams -lboost_system
