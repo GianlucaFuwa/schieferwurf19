@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
-set(PROJECT_NAME fltkproj1)
+set(PROJECT_NAME schieferwurf19)
 set(OUTPUT_DEBUG Debug/bin)
 set(OUTPUT_RELEASE Release/bin)
 set(CPP_DIR_1 ./)
